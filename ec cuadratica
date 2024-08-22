@@ -1,0 +1,51 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+    float a, b, c, R, X1, X2;
+    float XR, XI;
+
+    cout << "Ingresa el valor de a: ";
+    cin >> a;
+
+    if (a == 0) {
+        cout << "Ecuación indeterminada" << endl;
+        return 0;
+    }
+    else{
+        //funciona como un"SiNo"
+        cout << "Ingresa el valor de b: ";
+        cin >> b;
+        cout << "Ingresa el valor de c: ";
+        cin >> c;
+        R = pow(b, 2) - 4 * a * c;
+        if (R == 0) {
+            X1 = -b / (2 * a);
+            cout << "El resultado es una raíz unica" << endl;
+            cout << "El valor de X1 y X2 es: " << X1 << endl;
+        } 
+        
+        else {
+            if (R > 0) {
+                X1 = (-b + sqrt(R)) / (2 * a);
+                X2 = (-b - sqrt(R)) / (2 * a);
+                cout << "El resultado son dos raíces reales" << endl;
+                cout << "El valor de X1 es: " << X1 << endl;
+                cout << "El valor de X2 es: " << X2 << endl;
+            } 
+            
+            else {
+                //(R<0)este else por sí sola captura todos los casos que no esten en las condiciones anteriores
+                XR = -b / (2 * a);
+                XI = sqrt(-R) / (2 * a);
+                cout << "El resultado son dos raíces complejas" << endl;
+                cout << "El valor de X1 es: " << XR << " + " << XI << "i" << endl;
+                cout << "El valor de X2 es: " << XR << " - " << XI << "i" << endl;
+            }
+        }
+    }
+
+    return 0;
+}
