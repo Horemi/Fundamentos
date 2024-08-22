@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string N;
+    float H, S, precio;
+    
+    cout<<"ingrese nombre: ";
+    cin>>N;
+    cout<<"ingrese horas de trabajo: ";
+    cin>>H;
+    cout<<"ingrese horas x precio: ";
+    cin>>precio;
+    S= H*precio;
+    
+    if(S>=8272){
+        S=S*0,87;
+        cout<<"el salario es: "<<S;
+    }
+    
+        cout<<"el salario es: "<<S;
+    
+
+    return 0;
+}
