@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int contador, acumulador, n;
+    contador=1;
+    acumulador=0;
+    //validar dato
+    do{
+       cout<<"digite el numero de elementos a sumar: ";
+       cin>>n;
+    }while((0>=n)|| (n>50);
+    while(contador<=n){
+        acumulador=acumulador + contador;
+        contador=contador + 1;
+    }
+    cout<<"la suma de los primeros numeros es: "<<acumulador;
+
+    return 0;
+}
