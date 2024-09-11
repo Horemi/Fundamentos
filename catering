@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int CT, p;
+    cout<<"El costo por persona es de 50bs"<<endl;
+    cout<<"Ingrese la cantidad de personas para las que desea el servicio: ";
+    cin>>p;
+    CT=p * 50;
+    cout<<"El costo total del servicio sería de: "<<CT<<"bs"<<endl;
+
+    return 0;
+}
