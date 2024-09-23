@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int type, old;
+   cout<<"ingrese tipo de vehiculo 1.Auto 2.Moto: ";
+   cin>>type;
+   
+   if(type==1){
+   cout<<"ingrese añops de antiguedad: ";
+   cin>>old;
+        if(old>5){
+        cout<<"el deducible es 200bs";
+        }
+        else{
+            cout<<"el deducible es 300bs";
+        }
+   }
+   else
+        if(type==2){
+       cout<<"el deducible es 400bs";
+        
+   }
+   else{
+       cout<<"valor no valido";
+   }
+   
+    return 0;
+}
