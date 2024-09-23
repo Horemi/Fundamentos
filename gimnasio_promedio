@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    int suma=0, ins, i;
+    float prom, trim=12;
+    i=0;
+    while(i<trim){
+        cout<<"ingrese los inscritos esta semana: ";
+        cin>>ins;
+        i++;
+        suma=suma+ins;
+    }
+    prom=suma/trim;
+    cout<<"PROMEDIO: "<<prom<<endl;
+    cout<<"     "<<endl;
+    cout<<"Ahora comparacion de promedio"<<endl;
+    
+    int semsup=0, seminf=0, semig=0;
+    i=0;
+    
+    while(i<trim){
+        cout<<"ingrese los inscritos esta semana: ";
+        cin>>ins;
+        i++;
+        if(ins>prom){
+            semsup=semsup+1;
+        }
+        else
+            if(ins<prom){
+            seminf=seminf+1;
+        }
+        else{
+            semig=semig+1;
+        }
+    }
+    cout<<"promedio"<<prom<<endl;
+    cout<<"semanas inferiores al promedio: "<<seminf<<endl;
+    cout<<"semanas superiores al promedio: "<<semsup<<endl;
+    cout<<"semanas iguales al promedio: "<<semig;
+    
+    
+    return 0;
+}
