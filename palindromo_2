@@ -6,7 +6,7 @@ using namespace std;
 bool Palindromo(string palabra);
 
 int main()
-{   
+{   //aqui leee la fucnion y la ejecuta
     string palabra;
     bool espalindromo = true;
     cout<<"ingresa una palabra: ";
