@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//prototipo de la funcion
+bool Palindromo(string palabra);
+
+int main()
+{   
+    string palabra;
+    bool espalindromo = true;
+    cout<<"ingresa una palabra: ";
+    getline(cin, palabra);
+    espalindromo= Palindromo(palabra);
+    if(espalindromo)
+        cout<<"es palindromo";
+    else
+        cout<<"no es palindromo";
+    
+    return 0;
+}
+
+//declarar la funcion, las funciones las puedo hacer pero no usarlas
+bool Palindromo(string palabra){
+    int longitud; //debe ser entera para que la pueda utilizar
+    
+    longitud=palabra.length();
+    //en string la primera posicion siempre empieza en 0 
+    for(int i=0; i<longitud/2; i++){
+        if(palabra.at(i)!=palabra.at(longitud-i-1)){
+            return false; //no es palindromo
+        }
+    }
+    
+    
+    return true;
+}
