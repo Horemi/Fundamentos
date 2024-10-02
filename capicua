@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int numero, digito, original, cambiado = 0;
+	cout << "ingrese numero: ";
+	cin >> numero;
+	original = numero;
+	while (numero > 0) {
+		digito = numero % 10;
+		cambiado = digito + (cambiado * 10); 
+		numero = numero / 10;
+	}
+	if (original == cambiado) {
+		cout << "es un numero capicua";
+	}
+	else {
+		cout << "el numero no es capicua";
+	}
+	return 0;
+}
