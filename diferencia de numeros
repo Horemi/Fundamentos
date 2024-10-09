@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	int longitud, d1, d2;
+	string numero;
+	cout << "ingrese el numero: ";
+	cin >> numero;
+	longitud = numero.length();
+	for (int i = 0; i <= longitud / 2; i++) {
+		d1 = numero.at(i) - '0';
+		d2 = numero.at(longitud - i - 1) - '0';
+		cout << "la diferencia entre: " << d1 << " y " << d2 << " es: " << abs(d1 - d2) << endl;
+	}
+
+
+
+	return 0;
+}
