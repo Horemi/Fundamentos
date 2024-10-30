@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#define MAX 100
+using namespace std;
+
+void cargarall(string vec[], int tel[], int n);
+void mostrarall(string vec[], int tel[], int n);
+void burbujaall(string vec[], int tel[], int n);
+
+int main()
+{
+    int numlen, telef[MAX];
+    string nombre[MAX];
+    do {
+        cout << "Ingresar el numero de contactos: ";
+        cin >> numlen;
+    } while (numlen <= 0);
+    cin.ignore();
+    cargarall(nombre, telef, numlen);
+    burbujaall(nombre, telef, numlen);
+    mostrarall(nombre, telef, numlen);
+}
+
+void cargarall(string vec[], int tel[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << i + 1 << ". Nombre: ";
+        getline(cin, vec[i]);
+        cout << "\t telefono: ";
+        cin >> tel[i];
+        cin.ignore();
+    }
+}
+void mostrarall(string vec[], int tel[], int n) {
+    cout << "====================" << endl;
+    cout << "No. nombre \t telefono" << endl;
+    cout << "====================" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << i + 1 <<"  "<< vec[i] << " \t " << tel[i] << endl;
+    }
+}
+void burbujaall(string vec[], int tel[], int n) {
+    string auxnom;
+    int auxnum;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (vec[j] < vec[i]) {
+                auxnom = vec[j];
+                vec[j] = vec[i];
+                vec[i] = auxnom;
+
+                auxnum = tel[j];
+                tel[j] = tel[i];
+                tel[i] = auxnum;
+            }
+        }
+    }
+}
