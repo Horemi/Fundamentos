@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int tabla(int n);
+
+int main() {
+	int n;
+	do {
+		cout << "Ingrese un numero del 1 al 10: ";
+		cin >> n;
+	} while (n < 1 || n>10);
+	tabla(n);
+	return 0;
+}
+int tabla(int n) {
+	int mult = 0;
+	for (int i = 1; i <= 10; i++) {
+		mult = i * n;
+		cout << n << " X " << i << " = " << mult<<endl;
+	}
+	return mult;
+}
