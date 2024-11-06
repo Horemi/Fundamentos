@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int calcular(int n);
+
+int main()
+{
+    int n, sum;
+    do {
+        cout << "ingrese numero hasta el que desee sumar: ";
+        cin >> n;
+    } while (n <= 0);
+    sum=calcular(n);
+    cout << "La suma de 1 hasta el numero " << n << " es: " << sum;
+
+    return 0;
+}
+
+int calcular(int n) {
+    int suma = 0, i = 1;
+    while (i <= n) {
+        suma += i;
+        i++;
+    }
+    return suma;
+}
